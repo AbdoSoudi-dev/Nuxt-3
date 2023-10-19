@@ -3,6 +3,7 @@ import { resolve } from 'path'
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
+    '@nuxt/content',
     // '@nuxtjs/tailwindcss',
     // '@pinia/nuxt',
     // '@pinia-plugin-persistedstate/nuxt'
