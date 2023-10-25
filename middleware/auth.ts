@@ -2,19 +2,19 @@ export default defineNuxtRouteMiddleware((to, from) => {
     console.log(to);
     console.log(from);
 
-    const isLoggedIn  = false;
+    const isLoggedIn: boolean  = true;
     if (isLoggedIn) {
         return  navigateTo(to.fullPath);
     }
     
     return  navigateTo('/login');
-    // const user = useSupabaseUser()
-    // if (!user.value) {
-    //     return navigateTo('/login')
-    // }
-    // return true
+//     const user = useSupabaseUser()
+//     if (!user.value) {
+//         return navigateTo('/login')
+//     }
+//     return true
 
-    // skip middleware on server
+//     skip middleware on server
 //   if (process.server) return
 //   // skip middleware on client side entirely
 //   if (process.client) return
